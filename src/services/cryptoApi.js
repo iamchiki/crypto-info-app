@@ -11,8 +11,7 @@ export const cryptoApi = createApi({
         url: `coins/?limit=${limitCount}`,
         headers: {
           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-          'x-rapidapi-key':
-            'f0021db587msh781fb1cbef39856p11c183jsn45521d5d1c85',
+          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
         },
       }),
     }),
@@ -21,8 +20,7 @@ export const cryptoApi = createApi({
         url: `/coin/${coinId}`,
         headers: {
           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-          'x-rapidapi-key':
-            'f0021db587msh781fb1cbef39856p11c183jsn45521d5d1c85',
+          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
         },
       }),
     }),
@@ -31,8 +29,7 @@ export const cryptoApi = createApi({
         url: `coin/${coinId}/history?timeperiod=${timeperiod}`,
         headers: {
           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-          'x-rapidapi-key':
-            'f0021db587msh781fb1cbef39856p11c183jsn45521d5d1c85',
+          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
         },
       }),
     }),
