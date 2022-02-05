@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.crypto-decription h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
