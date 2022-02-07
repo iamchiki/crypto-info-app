@@ -1,5 +1,5 @@
 import SideNavbar from './components/SideNavbar';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home';
 import News from './components/News';
 import CryptoCurrencies from './components/CryptoCurrencies';
@@ -14,7 +14,7 @@ function App() {
 
       <div className='ml-[280px] flex-1 '>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Navigate to='/home'></Navigate>} />
           <Route path='/home' element={<Home />} />
           <Route
             path='/cryptos'
@@ -25,6 +25,7 @@ function App() {
             path='/cryptoDtl/:coinId'
             element={<CryptoDetail></CryptoDetail>}
           />
+          <Route path='*' element={<Navigate to='/home'></Navigate>} />
         </Routes>
       </div>
     </div>
