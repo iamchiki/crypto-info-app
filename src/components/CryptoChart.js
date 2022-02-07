@@ -40,10 +40,21 @@ const CryptoChart = (props) => {
       ],
     },
   };
+
   return (
-    <div>
-      <p>chart</p>
-      {/* <Line data={data} options={options} /> */}
+    <div className='mb-4'>
+      <div className='flex justify-between'>
+        <h1 className='font-medium text-light-indigo text-2xl'>
+          {coinName} Price Chart
+        </h1>
+        <div className='flex gap-x-4 font-bold'>
+          <span>Change: {coinHistory?.data?.change}%</span>
+          <span>
+            Current {coinName} Price: $ {currentPrice}
+          </span>
+        </div>
+      </div>
+      <Line data={data} options={options} />
     </div>
   );
 };
